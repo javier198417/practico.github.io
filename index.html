@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Responsivo con Bootstrap y CSS3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0lJg0D0m3x6S5O6t" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <h1>Bienvenidos a mi Proyecto CSS3 & Bootstrap</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#seccion-principal">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#formulario">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+
+        <section id="seccion-principal" class="mb-5">
+            <h2 class="text-center mb-4">Nuestros Servicios Destacados</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm custom-card">
+                        <img width="100" src="imagenes/descarga1.jpg" class="practico experimental" alt="Diseño Web">
+                        <div class="card-body">
+                            <h3 class="card-title">Diseño Web Moderno</h3>
+                            <p class="card-text">Utilizamos las últimas tendencias en diseño, centrándonos en la experiencia de usuario (UX) y la accesibilidad.</p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detalle1" aria-expanded="false" aria-controls="detalle1">
+                                Ver Detalles
+                            </button>
+                            <div class="collapse" id="detalle1">
+                                <div class="card card-body mt-2">
+                                    Incluye diseño responsivo y optimización SEO básica.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm custom-card">
+                        <img width="100" src="imagenes/robot.jpg" class="parctico experimental" alt="Desarrollo App">
+                        <div class="card-body">
+                            <h3 class="card-title">Desarrollo de Apps</h3>
+                            <p class="card-text">Creamos aplicaciones nativas y multiplataforma, garantizando rendimiento y estabilidad en todos los dispositivos.</p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detalle2" aria-expanded="false" aria-controls="detalle2">
+                                Ver Detalles
+                            </button>
+                            <div class="collapse" id="detalle2">
+                                <div class="card card-body mt-2">
+                                    Especializados en React Native y Flutter.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm custom-card">
+                        <img width="100" src="imagenes/robot.jpg" class="practico experimental" alt="Consultoría">
+                        <div class="card-body">
+                            <h3 class="card-title">Consultoría Digital</h3>
+                            <p class="card-text">Análisis, estrategia e implementación de soluciones digitales para potenciar tu negocio en el entorno online.</p>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detalle3" aria-expanded="false" aria-controls="detalle3">
+                                Ver Detalles
+                            </button>
+                            <div class="collapse" id="detalle3">
+                                <div class="card card-body mt-2">
+                                    Asesoramiento en cloud computing y DevOps.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulario" class="mb-5 p-4 border rounded shadow-lg custom-form-section">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="tu.email@ejemplo.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comentarios" class="form-label">Comentarios</label>
+                    <textarea class="form-control" id="comentarios" rows="3" placeholder="Escribe tu mensaje o consulta" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light text-center">
+        <div class="container">
+            <span class="text-muted">© 2025 Mi Sitio Bootstrap.</span>
+            <div>
+                <a href="#" class="text-secondary mx-2">Términos</a> | 
+                <a href="#" class="text-secondary mx-2">Privacidad</a> | 
+                <a href="#" class="text-secondary mx-2">Acerca de</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

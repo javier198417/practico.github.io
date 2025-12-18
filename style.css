@@ -1,0 +1,69 @@
+/* --- Estilos Globales y Sobrescritura de Bootstrap --- */
+
+/* Sobrescribe el color primario de Bootstrap (btn-primary, etc.) */
+.btn-primary {
+    /* Color de ejemplo: Naranja vibrante (#ff5733) */
+    background-color: #ff5733 !important;
+    border-color: #ff5733 !important;
+    color: white !important;
+    /* Añade una transición para el efecto hover */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación con :hover y transform para el botón */
+.btn-primary:hover {
+    background-color: #e64e2e !important; /* Tono más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Pequeño desplazamiento hacia arriba */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+}
+
+/* Estilo personalizado para las tarjetas (Cards) */
+.custom-card {
+    border-radius: 15px; /* Borde redondeado */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Transición para un efecto suave al hacer hover en la tarjeta */
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+/* Animación de la tarjeta con :hover y transform */
+.custom-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.03); /* Ligeramente más grande */
+}
+
+/* Estilo para el contenedor del formulario */
+.custom-form-section {
+    background-color: #f8f9fa; /* Color de fondo ligero */
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+/* Modelo de Cajas: Uso de Box Shadow en el encabezado (Navbar) */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Media Query Propia (CSS3 Avanzado) --- */
+
+/* Estilos aplicados solo en pantallas muy pequeñas (móviles) */
+@media (max-width: 576px) {
+    /* Cambiar el color de fondo del footer y el texto principal en móviles */
+    .footer {
+        background-color: #343a40 !important; /* Fondo oscuro */
+    }
+
+    .footer .text-muted, .footer a {
+        color: #adb5bd !important; /* Texto claro */
+    }
+
+    /* Reducir el tamaño de la sombra de las tarjetas en móviles para mejor rendimiento */
+    .custom-card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Remover la animación de transformar en móvil para evitar problemas de layout */
+    .custom-card:hover {
+        transform: none; 
+    }
+}
